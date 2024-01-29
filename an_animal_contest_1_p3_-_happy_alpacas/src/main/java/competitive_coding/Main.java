@@ -67,7 +67,7 @@ public class Main {
                         case 2:
                             giveNumberNoHappy = 1;    
                         break;
-                    }
+                    }// entfernbar einfach hochzählen?
                 }    
             break;
         
@@ -83,7 +83,7 @@ public class Main {
                             giveNumberNoHappy = 1;    
                         break;
                     }
-                }
+                }// muss es der letzte sein?
             break;
         }
 
@@ -91,7 +91,8 @@ public class Main {
 
         for(int i = 0; i < alpacaNumber.length - 1; i++){
             solution = solution + String.valueOf(alpacaNumber[i]) + " ";
-        }
+        }// muss es in ein array an Zahlen oder einfach direkt printable machen?
+        
 
         solution = solution + String.valueOf(alpacaNumber[alpacaNumber.length-1]);
 

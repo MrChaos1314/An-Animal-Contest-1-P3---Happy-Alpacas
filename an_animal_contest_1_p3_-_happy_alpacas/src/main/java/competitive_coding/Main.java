@@ -83,7 +83,7 @@ public class Main {
                             giveNumberNoHappy = 1;    
                         break;
                     }
-                }// muss es der letzte sein?
+                }// muss es der letzte sein? (sparen "2. while")
             break;
         }
 
@@ -92,7 +92,7 @@ public class Main {
         for(int i = 0; i < alpacaNumber.length - 1; i++){
             solution = solution + String.valueOf(alpacaNumber[i]) + " ";
         }// muss es in ein array an Zahlen oder einfach direkt printable machen?
-        
+
 
         solution = solution + String.valueOf(alpacaNumber[alpacaNumber.length-1]);
 

@@ -17,7 +17,7 @@ public class Main {
         System.out.println(howTheyHappy().trim());
 
         double finish = System.currentTimeMillis();
-        double timeElapsed = finish - start;
+        double timeElapsed = (finish - start);
         System.out.println((long) timeElapsed);
     }
 
@@ -47,33 +47,41 @@ public class Main {
         int giveNumberWithHappy = 1;
 
         if (howManyHappy - 1 >= 1) {
-            for (int i = 0; i < howManyHappy - 1; i++) {
+            for (int i = 0; i < numberOfAlpacas; i++) {
                 // alpacaNumber[i] = giveNumberWithHappy;
-                solution = solution + String.valueOf(giveNumberWithHappy) + " ";
-                switch (giveNumberWithHappy) {
-                    case 1:
-                        giveNumberWithHappy = 3;
-                        break;
 
-                    case 3:
+                if (i < howManyHappy - 1) {
+                    solution = solution + String.valueOf(giveNumberWithHappy) + " ";
+                    switch (giveNumberWithHappy) {
+                        case 1:
+                            giveNumberWithHappy = 3;
+                            break;
+
+                        case 3:
+                            giveNumberWithHappy = 1;
+                            break;
+                    }
+                } else {
+                    if (i == howManyHappy) {
                         giveNumberWithHappy = 1;
-                        break;
-                }
-            }
-            int numberContinue = 1;
-            for (int i = howManyHappy - 1; i < numberOfAlpacas; i++) {
-                // alpacaNumber[i] = numberContinue;
-                solution = solution + String.valueOf(numberContinue) + " ";
-                switch (numberContinue) {
-                    case 1:
-                        numberContinue = 2;
-                        break;
+                    }
+                    solution = solution + String.valueOf(giveNumberWithHappy) + " ";
+                    switch (giveNumberWithHappy) {
+                        case 1:
+                            giveNumberWithHappy = 2;
+                            break;
 
-                    case 2:
-                        numberContinue = 1;
-                        break;
+                        case 2:
+                            giveNumberWithHappy = 1;
+                            break;
+                    }
                 }
             }
+            // int numberContinue = 1;
+            // for (int i = howManyHappy - 1; i < numberOfAlpacas; i++) {
+            // // alpacaNumber[i] = numberContinue;
+
+            // }
         }
 
         int giveNumberNoHappy = 1;

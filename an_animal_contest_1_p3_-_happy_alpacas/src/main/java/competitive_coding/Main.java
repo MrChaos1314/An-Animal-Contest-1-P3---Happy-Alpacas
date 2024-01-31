@@ -44,43 +44,24 @@ public class Main {
             }
         }
 
-        int giveNumberWithHappy = 1;
+        // int giveNumberWithHappy = 1;
 
         if (howManyHappy - 1 >= 1) {
-            for (int i = 0; i < numberOfAlpacas; i++) {
+            for (int i = 0; i < (howManyHappy) / 2; i++) {
                 // alpacaNumber[i] = giveNumberWithHappy;
 
-                if (i < howManyHappy - 1) {
-                    solution = solution + String.valueOf(giveNumberWithHappy) + " ";
-                    switch (giveNumberWithHappy) {
-                        case 1:
-                            giveNumberWithHappy = 3;
-                            break;
+                solution = solution + " 1 3";
 
-                        case 3:
-                            giveNumberWithHappy = 1;
-                            break;
-                    }
-                } else {
-                    if (i == howManyHappy) {
-                        giveNumberWithHappy = 1;
-                    }
-                    solution = solution + String.valueOf(giveNumberWithHappy) + " ";
-                    switch (giveNumberWithHappy) {
-                        case 1:
-                            giveNumberWithHappy = 2;
-                            break;
-
-                        case 2:
-                            giveNumberWithHappy = 1;
-                            break;
-                    }
-                }
+            }
+            for (int i = howManyHappy / 2; i < numberOfAlpacas / 2; i++) {
+                solution = solution + " 1 2";
             }
             // int numberContinue = 1;
             // for (int i = howManyHappy - 1; i < numberOfAlpacas; i++) {
             // // alpacaNumber[i] = numberContinue;
-
+            if (!isEven(numberOfAlpacas)) {
+                solution = solution + " 1";
+            }
             // }
         }
 

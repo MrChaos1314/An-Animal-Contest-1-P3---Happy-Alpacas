@@ -50,37 +50,35 @@ public class Main {
             for (int i = 0; i < (howManyHappy) / 2; i++) {
                 // alpacaNumber[i] = giveNumberWithHappy;
 
-                solution = solution + " 1 3";
+                solution = solution + " 0 0";
 
             }
             for (int i = howManyHappy / 2; i < numberOfAlpacas / 2; i++) {
-                solution = solution + " 1 2";
+                solution = solution + " 0 1";
             }
             // int numberContinue = 1;
             // for (int i = howManyHappy - 1; i < numberOfAlpacas; i++) {
             // // alpacaNumber[i] = numberContinue;
             if (!isEven(numberOfAlpacas)) {
-                solution = solution + " 1";
+                solution = solution + " 0";
             }
             // }
         }
 
-        int giveNumberNoHappy = 1;
         switch (howManyHappy) {
             case 0:
-                for (int i = 0; i < numberOfAlpacas; i++) {
+                for (int i = 0; i < numberOfAlpacas / 2; i++) {
                     // alpacaNumber[i] = giveNumberNoHappy;
-                    solution = solution + String.valueOf(giveNumberNoHappy) + " ";
-                    giveNumberNoHappy++;
+                    solution = solution + " 0 1";
                 }
                 return solution;
 
             case 1:
-                for (int i = 0; i < numberOfAlpacas; i++) {
+                for (int i = 0; i < numberOfAlpacas / 2; i++) {
                     // alpacaNumber[i] = giveNumberNoHappy;
-                    solution = solution + String.valueOf(giveNumberNoHappy) + " ";
-                    giveNumberNoHappy++;
+                    solution = solution + " 0 1";
                 }
+                solution = solution + " 0";
                 return solution;
         }
 
